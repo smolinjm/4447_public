@@ -68,7 +68,6 @@ if [ "$1" != "" ]; then
     get_median
 
 
-    
     function get_mean(){
       total_freq=0
       count_=0
@@ -108,7 +107,7 @@ if [ "$1" != "" ]; then
       #tot=126825
       #cont=10980
       #my_mean="$(echo "$total_freq / $count_" | bc -l )"
-      my_mean=$(echo "($total_freq / $count_) / 1" | bc -l )
+      my_mean=$(echo "scale=0; ($total_freq / $count_) / 1" | bc -l )
       echo "Mean frequency using integer arithemetic = $my_mean"
       echo "-------" 
       echo "Q8 ----"
@@ -116,7 +115,8 @@ if [ "$1" != "" ]; then
       echo "Mean frequency using floating point arithemetic = $my_mean"
 
     }
-    get_mean
+    #get_mean
+    
 
     
 
@@ -136,8 +136,8 @@ if [ "$1" != "" ]; then
       echo "`$message` has been added to origin."
     }
     #commit_message="lazy_test_9"
-    #message="lazy_test_11"
-    read -p 'Please enter a commit message: ' message
+    message="lazy_test_12"
+    #read -p 'Please enter a commit message: ' message
     lazy_commit "$message"
 
 
