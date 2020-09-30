@@ -136,9 +136,9 @@ if [ "$1" != "" ]; then
       echo "`$message` has been added to origin."
     }
     #commit_message="lazy_test_9"
-    message="lazy_test_12"
+    message="lazy_test_13"
     #read -p 'Please enter a commit message: ' message
-    lazy_commit "$message"
+    lazy_commit $message
 
 
 
