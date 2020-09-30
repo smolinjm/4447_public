@@ -121,7 +121,7 @@ if [ "$1" != "" ]; then
     
 
     function lazy_commit() {
-      echo "Enter this at prompt for pwd: 808080 <then press enter>"
+      echo "PASSPHRASE: 808080 \<enter\>"
       git add .
       git commit -m $1
       eval $(ssh-agent -s)
