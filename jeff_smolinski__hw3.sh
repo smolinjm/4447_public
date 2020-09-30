@@ -121,22 +121,23 @@ if [ "$1" != "" ]; then
     
 
     function lazy_commit() {
-
+      echo "Enter this at prompt for pwd: 808080 <then press enter>"
       git add .
       git commit -m $1
-      #eval $(ssh-agent -s)
+      eval $(ssh-agent -s)
       #ssh-add ~/.ssh/4447_git   # UNIX
       #ssh-add /mnt/c/wsl/4447_git    # PC
+      ssh-add 4447_git    # local AUTH
       
       git push origin master
       #exit 1
-      #sleep 2
+      sleep 2
       
-      #ssh-agent -k
+      ssh-agent -k
       echo "Lazy Git END."
     }
     #commit_message="lazy_test_9"
-    message="lazy_test_14"
+    message="lazy_test_15"
     #read -p 'Please enter a commit message: ' message
     lazy_commit $message
 
