@@ -133,10 +133,10 @@ if [ "$1" != "" ]; then
       #sleep 2
       
       #ssh-agent -k
-      echo "`$message` has been added to origin."
+      echo "Lazy Git END."
     }
     #commit_message="lazy_test_9"
-    message="lazy_test_13"
+    message="lazy_test_14"
     #read -p 'Please enter a commit message: ' message
     lazy_commit $message
 
